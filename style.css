@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding 0;
+  
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #005;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 230px;
+
+  flex-wrap: wrap;
+}
+
+a {
+  display: block;
+
+  width: 60px;
+  height: 60px;
+
+  margin: 40px 10px;
+
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  line-height: 60px;
+
+  border: 2px solid black;
+  border-radius: 20px;
+
+  transition: 300ms;
+}
+
+a:hover {
+  transform: scale(1.2);
+  border-radius: 50%;
+
+  background-color: orange;
+  color: black;
+
+  transition: 300ms;
+}
+
+/* com os nomes */
+.face::before {
+  content: "Facebook";
+}
+
+.twitch::before {
+  content: "Twitch";
+}
+
+.insta::before {
+  content: "Instagram";
+}
+
+.twitter::before {
+  content: "Twitter";
+}
+
+.face::before,
+.twitch::before,
+.insta::before,
+.twitter::before {
+  display: none;
+  position: absolute;
+
+  transform: translate(22px, 50px);
+
+  width: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  opacity: .5;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px black;
+  color: #ccc;
+}
+
+.face:hover::before,
+.twitch:hover::before,
+.insta:hover::before,
+.twitter:hover::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
